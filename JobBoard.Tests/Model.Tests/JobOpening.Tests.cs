@@ -10,15 +10,35 @@ namespace ToDoList.Tests
   {
     public void Dispose()
     {
-      Item.ClearAll();
+      // JobOpening.ClearAll();
     }
 
-    // [TestMethod]
-    // public void ItemConstructor_CreatesInstanceOfItem_Item()
-    // {
-    //   Item newItem = new Item("test");
-    //   Assert.AreEqual(typeof(Item), newItem.GetType());
-    // }
+    [TestMethod]
+    public void JobOpeningConstructor_CreatesInstanceOfJobOpening_JobOpening()
+    {
+      JobOpening newJO = new JobOpening("", "", "");
+      Assert.AreEqual(typeof(JobOpening), newJO.GetType());
+    }
 
+    [TestMethod]
+    public void JobOpeningConstructor_ReturnTitle_string()
+    {
+      JobOpening newJO = new JobOpening("software developer", "", "");
+      Assert.AreEqual("software developer", newJO.Title);
+    }
+
+    [TestMethod]
+    public void JobOpeningConstructor_ReturnDescription_string()
+    {
+      JobOpening newJO = new JobOpening("software developer", "writes code", "");
+      Assert.AreEqual("writes code", newJO.Description);
+    }
+
+    [TestMethod]
+    public void JobOpeningConstructor_ReturnContactInfo_string()
+    {
+      JobOpening newJO = new JobOpening("software developer", "writes code", "jobs@company.com");
+      Assert.AreEqual("jobs@company.com", newJO.ContatctInfo);
+    }
   }
 }

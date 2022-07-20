@@ -9,13 +9,14 @@ namespace JobBoard.Models
     public string ContactInfo { get; set; }
     public int Id { get; }
     private static List<JobOpening> _instances = new List<JobOpening> { };
+    private static int _totalMade = 0;
     public JobOpening(string title, string description, string contactInfo)
     {
       Title = title;
       Description = description;
       ContactInfo = contactInfo;
       _instances.Add(this);
-      Id = _instances.Count;
+      Id = _totalMade++;
     }
 
     public static List<JobOpening> GetAll()

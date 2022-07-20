@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <form action="/jobOpenings" method="post">
+    <h1>Fill in the fields below to create a new job opening</h1>
+    <label for="title">Add a new Job Opening title</label>
+    <input id="title" name="title" type="text">
+    <label for="description">Add a new Job Opening description</label>
+    <input id="description" name="description" type="text">
+    <label for="contactInfo">Add the contact information</label>
+    <input id="contactInfo" name="contactInfo" type="text">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

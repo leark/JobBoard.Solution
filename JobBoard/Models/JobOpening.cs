@@ -11,7 +11,7 @@ namespace JobBoard.Models
     {
       Title = title;
       Description = description;
-      ContatctInfo = "placeholder";
+      ContatctInfo = contactInfo;
     }
     // public string Description { get; set; }
     // public int Id { get; }
